@@ -2,7 +2,7 @@ import map from 'lodash/fp/map';
 import get from 'lodash/fp/get';
 import { parse } from './helpers.jsx';
 
-export const command = 'sh yabai-status-bar/scripts/desktop.sh';
+export const command = 'sh yabai-status-bar/scripts/desktop.sh 2';
 
 export const refreshFrequency = false;
 
@@ -24,10 +24,10 @@ export const className = `
 const mapWithIndex = map.convert({ cap: false });
 
 const iconList = [
-  'fi emacs-icon',
-  'fi terminal-icon',
-  'fab fa-chrome',
   'fab fa-slack',
+  'fas fa-code',
+  'fas fa-terminal',
+  'fab fa-chrome',
   'fas fa-comments',
   'fas fa-desktop',
 ];
@@ -54,7 +54,7 @@ export const render = ({ output }) => {
                 : iconList[index]
             }
           />
-          {workspace.index === get('active.index')(data) && (
+          {workspace.visible === 1 && (
             <div
               style={{
                 height: 1,
