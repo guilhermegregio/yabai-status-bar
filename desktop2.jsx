@@ -23,14 +23,7 @@ export const className = `
 
 const mapWithIndex = map.convert({ cap: false });
 
-const iconList = [
-  'fab fa-slack',
-  'fas fa-code',
-  'fas fa-terminal',
-  'fab fa-chrome',
-  'fas fa-comments',
-  'fas fa-desktop',
-];
+const iconList = ['fab fa-chrome', 'fab fa-slack', 'fas fa-desktop'];
 
 export const render = ({ output }) => {
   let data = parse(output);

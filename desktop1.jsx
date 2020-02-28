@@ -25,10 +25,9 @@ const mapWithIndex = map.convert({ cap: false });
 
 const iconList = [
   'fas fa-code',
-  'fas fa-terminal',
+  'fas fa-comments',
   'fab fa-chrome',
   'fab fa-slack',
-  'fas fa-comments',
   'fas fa-desktop',
 ];
 
